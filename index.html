@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ------Header------------------ -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./images/logo.jpg" class="logo" alt="logo" />
+          <ul id="sidemenu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"> </i>
+        </nav>
+
+        <div class="header-part">
+          <div class="hero-image">
+            <img src="./images/logo.jpg" alt="hero-image" />
+          </div>
+
+          <div class="header-text">
+            <!-- <p>Front-end Developer</p> -->
+            <h1>Hi I'm <span>Rishabh Kumar,</span></h1>
+            <p>a frontend developer from India.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+              harum ipsum dolorum aliquid corporis voluptas perferendis! Quas
+              obcaecati sit vel tempore alias, tenetur eos quam quibusdam
+              nesciunt? Est, quia assumenda?
+            </p>
+          </div>
+
+          <!-- <div class="about-col-2"></div> -->
+        </div>
+
+        <!-- -------------Tabs section----------------- -->
+        <div class="tab">
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <!-- ----------------Tab contents----------------- -->
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>frontend development</span><br />Designing web pages and
+                web applications
+              </li>
+              <li>
+                <span>frontend development</span><br />Designing web pages and
+                web applications
+              </li>
+              <li>
+                <span>frontend development</span><br />Designing web pages and
+                web applications
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>frontend development</span><br />Designing web pages and
+                web applications
+              </li>
+              <!-- <li>
+              <span>frontend development</span><br />Designing web pages and web
+              applications
+            </li>
+            <li>
+              <span>frontend development</span><br />Designing web pages and web
+              applications
+            </li> -->
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>frontend development</span><br />Designing web pages and
+                web applications
+              </li>
+              <li>
+                <span>frontend development</span><br />Designing web pages and
+                web applications
+              </li>
+              <li>
+                <span>frontend development</span><br />Designing web pages and
+                web applications
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------------Work Section-------------------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="./images/logo.jpg" alt="" />
+            <div class="layer">
+              <h3>Social media</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi accusamus temporibus earum inventore ad. Nesciunt at
+                deleniti hic illum doloremque amet mollitia vitae
+              </p>
+              <div class="demo-link">
+                <a href="#"><button>Github</button></a>
+                <a href="#"><button>Live link</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/logo.jpg" alt="" />
+            <div class="layer">
+              <h3>Social media</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi accusamus temporibus earum inventore ad. Nesciunt at
+                deleniti hic illum doloremque amet mollitia vitae
+              </p>
+              <div class="demo-link">
+                <a href="#"><button>Github</button></a>
+                <a href="#"><button>Live link</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/logo.jpg" alt="" />
+            <div class="layer">
+              <h3>Social media</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi accusamus temporibus earum inventore ad. Nesciunt at
+                deleniti hic illum doloremque amet mollitia vitae
+              </p>
+
+              <div class="demo-link">
+                <a href="#"><button>Github</button></a>
+                <a href="#"><button>Live link</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn">See More</button>
+        <div class="work-list2 inactive">
+          <div class="work">
+            <img src="./images/logo.jpg" alt="" />
+            <div class="layer">
+              <h3>Social media</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi accusamus temporibus earum inventore ad. Nesciunt at
+                deleniti hic illum doloremque amet mollitia vitae
+              </p>
+
+              <div class="demo-link">
+                <a href="#"><button>Github</button></a>
+                <a href="#"><button>Live link</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/logo.jpg" alt="" />
+            <div class="layer">
+              <h3>Social media</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi accusamus temporibus earum inventore ad. Nesciunt at
+                deleniti hic illum doloremque amet mollitia vitae
+              </p>
+
+              <div class="demo-link">
+                <a href="#"><button>Github</button></a>
+                <a href="#"><button>Live link</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/logo.jpg" alt="" />
+            <div class="layer">
+              <h3>Social media</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi accusamus temporibus earum inventore ad. Nesciunt at
+                deleniti hic illum doloremque amet mollitia vitae
+              </p>
+
+              <div class="demo-link">
+                <a href="#"><button>Github</button></a>
+                <a href="#"><button>Live link</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------Contact Form------------------ -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+            <p><i class="fa-solid fa-phone"></i>0123456789</p>
+            <div class="social-icons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="./images/Rishabh's Resume1.pdf" download class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your e-mail"
+                required
+              />
+              <textarea
+                name="Message"
+                irows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Made with 🧡 by Rishabh</p>
+      </div>
+    </div>
+
+    <!-- ---------------------------------Scripts-------------------------------- -->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      var seemoreBtn = document.querySelector(".btn");
+      var worklist2 = document.querySelector(".work-list2");
+      console.log(seemoreBtn);
+
+      seemoreBtn.addEventListener("click", showMoreHandler);
+
+      // seemore button logic
+      function showMoreHandler(e) {
+        worklist2.classList.toggle("inactive");
+        e.currentTarget.textContent === "Show Less"
+          ? (seemoreBtn.textContent = "See More")
+          : (seemoreBtn.textContent = "Show Less");
+
+        e.currentTarget.remove();
+        // e.currentTarget.removeEventListener("click");
+        worklist2.insertAdjacentElement("afterend", seemoreBtn);
+      }
+
+      // opentab logic
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <!-- --------------------2nd script----------------------- -->
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      //open menu logic
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      // closemenu logic
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
