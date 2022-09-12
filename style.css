@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,10 +16,9 @@ body {
     rgb(22, 1, 54)
   );
   background-size: 400% 400%;
-  animation: gradient 6s ease infinite;
+  animation: gradient 6s ease-in-out infinite;
   box-shadow: 5px 10px 60px 20px #10218093 inset;
   color: #fff;
-  scroll-behavior: smooth;
 }
 
 @keyframes gradient {
@@ -49,6 +49,7 @@ body {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
+  padding-top: 170px;
 }
 
 .container {
@@ -56,10 +57,21 @@ body {
 }
 
 nav {
+  z-index: 2;
+  background: linear-gradient(
+    0deg,
+    rgba(3, 112, 136, 0.253),
+    rgba(62, 131, 234, 0.581),
+    rgba(83, 42, 228, 0.76)
+  );
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 8px 60px;
   flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  /* column-gap: 150px; */
 }
 
 .ham {
@@ -85,7 +97,7 @@ nav {
 }
 
 .logo {
-  width: 80px;
+  width: 52px;
 }
 
 nav ul li {
@@ -122,6 +134,7 @@ nav ul li a:hover::after {
   /* flex-wrap: wrap; */
   flex-basis: 45%;
   font-size: 1.8rem;
+  padding-bottom: 80px;
 }
 
 .header-text h1 {
@@ -240,9 +253,10 @@ nav ul li a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
   grid-gap: 60px;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   margin-top: 60px;
-  /* height: 70vh; */
+  padding-bottom: 40px;
+  /* height: 60vh; */
 }
 
 /* .work-list2 {
@@ -257,8 +271,9 @@ nav ul li a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
   grid-gap: 60px;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   margin-top: 60px;
+  padding-bottom: 40px;
 }
 
 .work-list2.inactive {
@@ -273,7 +288,7 @@ nav ul li a:hover::after {
 }
 
 .work img {
-  width: 80%;
+  width: 83%;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s ease-out;
@@ -288,7 +303,7 @@ nav ul li a:hover::after {
 }
 
 .layer {
-  width: 85%;
+  width: 88%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #63b0e7);
   border-radius: 10px;
@@ -300,7 +315,8 @@ nav ul li a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 35px;
+  row-gap: 20px;
+  padding: 0 30px;
   text-align: center;
   font-size: 14px;
   transition: height 0.5s ease;
@@ -334,7 +350,7 @@ nav ul li a:hover::after {
 }
 
 .btn {
-  margin: 40px 40px;
+  margin: 60px 30px 20px 50px;
   padding: 0.8rem 1rem;
   background-color: rgb(15, 115, 203);
   box-shadow: 1px 1px 15px 5px rgba(39, 61, 160, 0.795) inset;
@@ -454,6 +470,10 @@ nav .fa-solid {
     display: none;
   } */
 
+  /* body {
+    overflow-x: hidden;
+  } */
+
   nav .fa-solid {
     display: block;
     font-size: 25px;
@@ -472,7 +492,7 @@ nav .fa-solid {
   }
 
   .hero-image > img {
-    max-height: 270px;
+    max-height: 265px;
   }
 
   nav ul {
@@ -489,7 +509,11 @@ nav .fa-solid {
   }
 
   .logo {
-    width: 60px;
+    width: 45px;
+  }
+
+  nav {
+    padding: 6px 30px;
   }
 
   nav ul li {
@@ -510,12 +534,12 @@ nav .fa-solid {
   }
 
   .header-part {
-    margin-top: 80px;
+    margin-top: 60px;
     row-gap: 70px;
     flex-direction: column-reverse;
     justify-content: space-around;
     flex-shrink: 1.2;
-    height: 100vh;
+    height: 70vh;
   }
 
   .header-text {
@@ -524,15 +548,16 @@ nav .fa-solid {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: flex-start; */
+    justify-content: center;
+    row-gap: 12px;
   }
 
   .header-text h1 {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .sub-title {
-    font-size: 30px;
+    font-size: 40px;
     color: #d2cb06;
   }
 
@@ -549,19 +574,20 @@ nav .fa-solid {
   }
 
   .about-col-1 > p {
-    width: 260px;
+    width: 280px;
     font-size: 14px;
+    margin-left: 8%;
   }
 
   .tab {
     height: 65vh;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     padding-top: 20px;
   }
 
   .tab-links {
-    font-size: 15px;
-    margin-right: 25px;
+    font-size: 18px;
+    margin-right: 20px;
     font-weight: 700;
     text-transform: capitalize;
     color: #d5da60;
@@ -580,10 +606,6 @@ nav .fa-solid {
 
   .tab-contents {
     margin: 0 auto;
-  }
-
-  .layer {
-    font-size: 12px;
   }
 
   .demo-link a button {
@@ -607,7 +629,7 @@ nav .fa-solid {
   }
 
   .contact-left h1 {
-    font-size: 50px;
+    font-size: 48px;
     color: #45cbe9;
   }
 
@@ -629,25 +651,33 @@ nav .fa-solid {
   .work-list,
   .work-list2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 290px));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 290px));
     grid-gap: 25px;
-    padding: 20px 2rem 0 0;
+    padding: 20px 0 0 0;
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
     /* height: 70vh; */
   }
 
   .work:hover .layer {
-    height: 74%;
+    height: 77%;
+    bottom: 80px;
   }
 
   .layer {
-    width: 85%;
+    width: 87%;
     bottom: 90px;
+    padding: 0 20px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
   }
 
   #portfolio > .container > .sub-title {
     padding-bottom: 50px;
+    padding-left: 45px;
   }
 
   .btn {
@@ -839,12 +869,12 @@ nav .fa-solid {
   }
 
   .work:hover .layer {
-    height: 74%;
+    height: 78%;
   }
 
   .layer {
-    width: 85%;
-    bottom: 90px;
+    width: 87%;
+    bottom: 78px;
   }
 
   #portfolio > .container > .sub-title {
